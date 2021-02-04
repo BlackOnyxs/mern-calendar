@@ -67,9 +67,9 @@ const getEventById = async( req, res ) =>{
     }
 } 
 
-const updateEvent = async (req, resp) => {
+const updateEvent = async (req, res) => {
     const eventId = req.params.id;
-
+    const uid = req.uid;
     try {
         
         const event = await Event.findById(eventId);
@@ -110,7 +110,7 @@ const updateEvent = async (req, resp) => {
 
 const deleteEvent = async (req, res) => {
     const eventId = req.params.id;
-    
+    const uid = req.uid;
     try {
 
         const event = await Event.findById(eventId);

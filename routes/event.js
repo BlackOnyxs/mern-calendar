@@ -31,7 +31,7 @@ router.get(
 );
 
 router.put(
-    ':id',
+    '/:id',
     [
         check('start', 'The start is required.').custom( isDate ),
         check('end', 'The end is required.').custom(isDate),
