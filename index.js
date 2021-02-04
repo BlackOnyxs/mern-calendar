@@ -6,11 +6,11 @@ const { dbConnection } = require('./database/config');
 // Crear el servidor de express
 const app = express();
 
+// CORS
+app.use(cors())
 // Base de datos
 dbConnection();
 
-// CORS
-app.use(cors())
 
 // Directorio Público
 app.use( express.static('public') );
